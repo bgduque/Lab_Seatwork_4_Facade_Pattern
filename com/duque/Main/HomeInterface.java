@@ -1,15 +1,13 @@
 import classes.TV;
 
-import com.duque.Interfaces.HomeService;
-
 import classes.Airconditioning;
 import classes.Light;
 
 public class HomeInterface {
 
-    private HomeService tv = new TV();
-    private HomeService light = new Light();
-    private HomeService ac = new Airconditioning();
+    private TV tv = new TV();
+    private Light light = new Light();
+    private Airconditioning ac = new Airconditioning();
 
     public HomeInterface() {
         this.tv = new TV();
