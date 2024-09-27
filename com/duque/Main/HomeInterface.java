@@ -1,29 +1,32 @@
 import classes.TV;
+
+import com.duque.Interfaces.HomeService;
+
 import classes.Airconditioning;
 import classes.Light;
 
 public class HomeInterface {
 
-    public TV tv;
-    public Light light;
-    public Airconditioning airconditioning;
+    private HomeService tv = new TV();
+    private HomeService light = new Light();
+    private HomeService ac = new Airconditioning();
 
     public HomeInterface() {
         this.tv = new TV();
         this.light = new Light();
-        this.airconditioning = new Airconditioning();
+        this.ac = new Airconditioning();
     }
 
     public void turnOnAll() {
         tv.turnOn();
         light.turnOn();
-        airconditioning.turnOn();
+        ac.turnOn();
     }
 
     public void turnOffAll() {
         tv.turnOff();
         light.turnOff();
-        airconditioning.turnOff();
+        ac.turnOff();
     }
 
 }
